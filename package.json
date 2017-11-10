@@ -1,5 +1,5 @@
 {
-  "name": "justindb-nodejs-sdk",
+  "name": "justindb",
   "version": "0.0.1",
   "description": "The JustinDB SDK for Node.js",
   "main": "index.js",

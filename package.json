@@ -1,5 +1,5 @@
 {
-  "name": "justindb-nodejs-sdk",
+  "name": "justindb",
   "version": "0.0.1",
   "description": "The JustinDB SDK for Node.js",
   "main": "index.js",
@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/justin-db/JustinDB-nodejs-sdk/issues"
   },
-  "homepage": "https://github.com/justin-db/JustinDB-nodejs-sdk#readme"
+  "homepage": "https://github.com/justin-db/JustinDB-nodejs-sdk#readme",
+  "dependencies": {
+    "request": "^2.83.0",
+    "request-promise-native": "^1.0.5"
+  }
 }

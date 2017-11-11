@@ -1,17 +1,34 @@
 'use strict';
 
-function Client(options) { };
+var rp = require('request-promise-native');
 
-Client.prototype.get = async function() {
-  return new Promise(function (resolve, reject) {
-    resolve("GET data from justindb");
-  });
+function Client(options) {
+  this._baseUrl = 'http://localhost:9000'
 };
 
-Client.prototype.put = async function() {
-  return new Promise(function (resolve, reject) {
-    resolve("PUT data to justindb");
-  });
+Client.prototype.get = async function(uuid, r) {
+  let options = {
+    url : this._baseUrl + "/get",
+    qs: {
+      'id' : uuid,
+      'r'  : r
+    }
+  }
+  return rp(options);
+};
+
+Client.prototype.put = async function(uuid, data, w) {
+  let options = {
+    method: 'POST',
+    uri: this._baseUrl + '/put',
+    body: {
+      'id'    : uuid,
+      'value' : data,
+      'w'     : w
+    },
+    json: true // Automatically stringifies the body to JSON
+  };
+  return rp(options);
 };
 
 module.exports = Client;

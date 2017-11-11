@@ -15,8 +15,5 @@
   "bugs": {
     "url": "https://github.com/justin-db/JustinDB-nodejs-sdk/issues"
   },
-  "homepage": "https://github.com/justin-db/JustinDB-nodejs-sdk#readme",
-  "dependencies": {
-    "es6-promise": "^3.2.1"
-  }
+  "homepage": "https://github.com/justin-db/JustinDB-nodejs-sdk#readme"
 }

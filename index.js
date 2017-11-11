@@ -1,7 +1,5 @@
 'use strict';
 
-var Promise = require('es6-promise').Promise;
-
 function Client(options) { };
 
 Client.prototype.get = async function() {
